@@ -139,14 +139,6 @@ matplotlib
 asyncio
 ```
 
----
-
-## 🌐 Demo (Optional)
-
-You can deploy this app using [Streamlit](https://streamlit.io/), [Hugging Face Spaces](https://huggingface.co/spaces), or [Vercel](https://vercel.com).
-Live demo (if available): *Add your link here*
-
----
 
 ## 🙏 Acknowledgements
 
