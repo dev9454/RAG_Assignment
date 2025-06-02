@@ -1,0 +1,10 @@
+langchain>=0.1.0
+langchain-community>=0.0.28
+langchain-core>=0.1.33
+langchain-huggingface>=0.0.5
+langchain-ollama>=0.0.6
+chromadb>=0.4.24
+sentence-transformers>=2.2.2
+streamlit>=1.30.0
+matplotlib>=3.8.0
+asyncio ; python_version < '3.11'  # Built-in from Python 3.11 onwards
