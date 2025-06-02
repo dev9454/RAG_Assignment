@@ -1,65 +1,81 @@
-Friendly Mental Health Chatbot
-Overview
-This project is a Retrieval-Augmented Generation (RAG)-based chatbot designed to provide empathetic and helpful responses rooted in trusted mental health resources. The chatbot offers emotional support by combining vector-based document retrieval with local language model generation, delivering informed and emotionally intelligent answers.
+# Friendly Mental Health Chatbot
 
-Problem Statement
-The Challenge
-Many people seeking emotional support may hesitate to consult professionals or find it overwhelming to sift through vast amounts of mental health literature.
+A Retrieval-Augmented Generation (RAG)-based chatbot that offers emotionally supportive and informed responses grounded in curated mental health content. The assistant combines document retrieval with a local language model (LLM) to ensure that responses are both empathetic and fact-based.
 
-Our Solution
-This chatbot addresses these issues by providing accessible, reliable, and empathetic guidance based on verified mental health content. Unlike generic chatbots that solely rely on large language models (LLMs), this system uses RAG to ground responses in factual documents, reducing hallucinations and improving relevance.
+---
 
-Why Use Retrieval-Augmented Generation (RAG)?
-RAG improves the quality and trustworthiness of chatbot responses by retrieving relevant text passages from verified resources before generating a reply. This process ensures that responses are:
+## Problem Statement
 
-Factually informed and accurate
+### The Challenge
 
-Grounded in real-world data
+Many individuals seek mental health support but hesitate to speak to professionals or struggle to navigate online resources. Most generic AI assistants generate responses based on patterns in data rather than real-world information, making them unreliable for sensitive emotional guidance.
 
-Less prone to fabrications or hallucinations
+### The Solution
 
-By combining retrieval with generation, the chatbot produces helpful and contextually appropriate answers.
+This chatbot provides accessible, emotionally intelligent responses backed by verified mental health material. It uses Retrieval-Augmented Generation (RAG) to extract helpful information from a trusted knowledge base before generating a response, ensuring that the answers are more relevant, grounded, and context-aware.
 
-RAG Architecture Overview
-Data for Retrieval
-The chatbot uses a curated knowledge base stored in the file mental_health_resources.txt.
+---
 
-This file contains supportive advice, therapy techniques, and emotional wellness tips sourced from credible mental health resources.
+## Why Use Retrieval-Augmented Generation (RAG)?
 
-Retrieval Component
-Vector Store: ChromaDB, which efficiently indexes and searches document embeddings.
+RAG improves the reliability and precision of chatbot responses by retrieving relevant data from curated resources before the model generates output. This approach:
 
-Embedding Model: all-MiniLM-L6-v2 from Hugging Face sentence-transformers, used to convert text documents into vector representations.
+- Reduces hallucination
+- Ensures responses are backed by factual content
+- Increases user trust
+- Produces more domain-relevant guidance
 
-Document Splitting: LangChain’s RecursiveCharacterTextSplitter to break down large texts into manageable chunks for better retrieval.
+---
 
-Generation Component
-Large Language Model (LLM): llama3 accessed via Ollama for local inference.
+## RAG Architecture Overview
 
-Framework: LangChain to orchestrate the retrieval and generation pipeline.
+### Data Source for Retrieval
 
-Prompting Strategy: A custom prompt template that incorporates conversation history and retrieved documents to generate concise, friendly, and relevant responses.
+- A single curated file: `mental_health_resources.txt`  
+- Contains therapy advice, mental health techniques, and well-being tips
 
-Tools and Frameworks
-LangChain: For building and managing the RAG pipeline workflow.
+### Retrieval Component
 
-ChromaDB: Acts as the vector database enabling fast similarity search over the knowledge base.
+- **Vector Store:** ChromaDB  
+- **Embedding Model:** all-MiniLM-L6-v2 (from Hugging Face)  
+- **Chunking Method:** LangChain’s `RecursiveCharacterTextSplitter`
 
-Ollama: Provides local, offline access to the LLaMA 3 model for response generation without external API dependencies.
+### Generation Component
 
-Hugging Face Transformers: Used for embedding generation with the sentence-transformers library.
+- **LLM:** LLaMA 3 (run locally via Ollama)  
+- **Framework:** LangChain  
+- **Prompt Strategy:** Injects chat history and retrieved documents into a custom template to guide the model
 
-Matplotlib: Optional tool for visualizing response time analytics.
+---
 
-Model and Embeddings Details
-Language Model: llama3 running locally via Ollama, enabling privacy and fast response times.
+## Tools and Frameworks Used
 
-Embedding Model: all-MiniLM-L6-v2 from Sentence-Transformers, which balances performance and speed.
+- **LangChain** – RAG orchestration and prompt chaining  
+- **ChromaDB** – Lightweight vector store for document retrieval  
+- **Hugging Face Sentence-Transformers** – Embeddings using `all-MiniLM-L6-v2`  
+- **Ollama** – Local execution of the LLaMA 3 model  
+- **Matplotlib** – For response time visualization  
+- **Asyncio & Python** – For fast interaction loop
 
-Cost and Accessibility: All components operate locally with no need for paid API keys, making the solution free-tier friendly and privacy-conscious.
+---
 
+## LLM and Embedding Model Details
 
+- **LLM Used:** LLaMA 3 via Ollama  
+- **Embedding Model:** all-MiniLM-L6-v2  
+- **Deployment:** Fully local, privacy-focused, no API keys or cloud calls  
+- **Free Tier:** All tools run offline and free of cost
 
+---
+
+## Getting Started
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/your-repo/chatbot.git
+cd chatbot
+``
 
 ### 2. (Optional) Create a Virtual Environment
 
