@@ -2,7 +2,7 @@
 ---
 
 ````md
-# 🧠 Friendly Mental Health Chatbot
+🧠 Friendly Mental Health Chatbot
 
 A Retrieval-Augmented Generation (RAG)-based chatbot that provides empathetic and helpful responses grounded in reliable mental health resources. Ideal for offering emotional support, this assistant uses vector-based retrieval and local LLM generation for informed, emotionally intelligent responses.
 
@@ -110,6 +110,14 @@ python chatbot.py
 After exiting, a Matplotlib plot will show LLM response time per user interaction.
 
 ---
+⚠️ Note on Deployment
+This project uses Ollama to run llama3 locally, which means:
+
+Cloud deployment is currently not possible due to the local nature of the LLM.
+
+However, the chatbot has been successfully deployed and tested locally, and relevant screenshots of the local deployment are included in the repository.
+
+For cloud compatibility, replacing Ollama with a cloud-hosted LLM API (like OpenAI or HuggingFace endpoints) is recommended.
 
 ## 📁 Project Structure
 
